@@ -25,7 +25,7 @@ pip show langgraph langchain-core rclpy ultralytics flower fl
 
 **Decision rules:**
  If PX4 SITL + Gazebo + Micro XRCE-DDS has no verified build for your OS → **stay on Ubuntu 24.04** (your paper-1 stack). Report the version limitation in the paper. This is a tooling detail, not a contribution.
-- If `ultralytics` orlanggraph` wheels fail on Python3.14 → pin Python 3.12 via:
+- If `ultralytics` or `langgraph` wheels fail on Python3.14 → pin Python 3.12 via:
 
 ```bash
 # Using uv (recommended)
@@ -46,7 +46,7 @@ uv pip compile requirements.in -o requirements.lock
 
 **Exit criterion:** `ros2 doctor` clean, PX4 SITL spawns one drone, Ollama servesqwen` 2B with a successful inference, LangGraph "hello world" graph runs, and the in-venv `rclpy` path assertion passes after sourcing `install/setup.bash`. The audit passes only in the agent launcher's environment. Do not proceed until all five pass.
 
-## 02 Repository Restructure (Day 0–1)
+## 0.2 Repository Restructure (Day 0–1)
 
 ```
 edgents-v2/
